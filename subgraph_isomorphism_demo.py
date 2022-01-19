@@ -20,19 +20,7 @@ match sys.argv[1:]:
     case _:
         raise ValueError('Arguments invalid.')
 
-AG_FILEPATHS_ORDER = {
-    'AG_Tokyo.graphml': 0,
-    'AG_Sycamore.graphml': 1,
-    'AG_Rochester.graphml': 1,
-    'AG_Grid5x5.graphml': 2,
-    'AG_Grid9x9.graphml': 3,
-    'AG_Grid19x19.graphml': 4
-        }
-
-ag_filepaths = sorted(
-    list(ag_dir.rglob('*.graphml')), 
-    key=lambda path: AG_FILEPATHS_ORDER[path.name]
-)
+ag_filepaths = list(ag_dir.rglob('*.graphml'))
 cg_filepaths = list(cg_dir.rglob('*.graphml'))
 
 # Create data dir, empty data_dir of previous files for consistency.
