@@ -10,3 +10,5 @@ To run VF2 algorithm on all AG and all CG:
 The runtime will likely blow up on some of the larger circuit graphs (subgraphs). To run with a smaller subset of those:
 
 `python3 subgraph_isomorphism_demo.py -c B131`.
+
+Developed with Python 3.10.
